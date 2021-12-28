@@ -8,6 +8,6 @@ class AlbumsController < ApplicationController
 
   def show
     @album = Results.new
-    render json: @album.get('/album/' + params[:id]).body, status: 200
+    render json: @album.get('/albums/' + params[:id]).body, status: 200
   end
 end
