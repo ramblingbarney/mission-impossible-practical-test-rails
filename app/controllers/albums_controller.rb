@@ -10,4 +10,9 @@ class AlbumsController < ApplicationController
     @album = Results.new
     render json: @album.get('/albums/' + params[:id]).body, status: 200
   end
+
+  def user
+    @album = Results.new
+    render json: @album.query('/albums/', params).body, status: 200
+  end
 end

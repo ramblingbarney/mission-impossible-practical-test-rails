@@ -11,7 +11,6 @@ RSpec.describe "get all albums resource", :type => :request do
   it 'returns status code 200' do
     expect(response).to have_http_status(:success)
   end
-
 end
 
 RSpec.describe "get a single album resource", :type => :request do
@@ -28,5 +27,17 @@ RSpec.describe "get a single album resource", :type => :request do
   it 'returns status code 200' do
     expect(response).to have_http_status(:success)
   end
+end
 
+RSpec.describe "get all albums for a specified user resource", :type => :request do
+
+  before {get '/albums?userId=1'}
+
+  it 'returns all albums for a user' do
+    expect(JSON.parse(response.body).size).to eq(100)
+  end
+
+  it 'returns status code 200' do
+    expect(response).to have_http_status(:success)
+  end
 end
