@@ -9,6 +9,10 @@
 
 * ```bundle install```
 
+## Running Server
+
+* ```bin/rails server```
+
 ### Running Tests
 
   * ```bundle exec rspec spec/requests/*_spec.rb ```
