@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get '/albums?userId' => 'albums#user'
   get '/albums' => 'albums#index'
   get '/album/:id' => 'albums#show'
+  get '/photos' => 'photos#show'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
