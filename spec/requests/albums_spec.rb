@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "get all albums resource", :type => :request do
+RSpec.describe "get all albums resource", :type => :request do
 
   before {get '/albums'}
 
@@ -14,11 +14,11 @@ describe "get all albums resource", :type => :request do
 
 end
 
-describe "get a single album resource", :type => :request do
+RSpec.describe "get a single album resource", :type => :request do
 
   before {get '/album/1'}
 
-  it 'returns a signle album' do
+  it 'returns a single album' do
     result = JSON.parse(response.body)
 
     expect(result['title']).to eq('quidem molestiae enim')
