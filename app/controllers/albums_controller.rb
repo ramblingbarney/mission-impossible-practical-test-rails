@@ -3,12 +3,12 @@ class AlbumsController < ApplicationController
 
   def index
     @albums = Results.new
-    render json: @albums.get('/albums').body, status: 200
+    render json: @albums.get('/albums', 'albums').body, status: 200
   end
 
   def show
     @album = Results.new
-    render json: @album.get('/albums/' + params[:id]).body, status: 200
+    render json: @album.get('/albums/' + params[:id], 'one_album').body, status: 200
   end
 
   def user

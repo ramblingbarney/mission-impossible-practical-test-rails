@@ -3,6 +3,6 @@ class UsersController < ApplicationController
 
   def show
     @user = Results.new
-    render json: @user.get('/users/' + params[:id]).body, status: 200
+    render json: @user.get('/users/' + params[:id], 'user').body, status: 200
   end
 end

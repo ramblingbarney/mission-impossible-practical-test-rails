@@ -3,6 +3,6 @@ class PhotosController < ApplicationController
 
   def show
     @photo = Results.new
-    render json: @photo.query('/photos', params).body, status: 200
+    render json: @photo.query('/photos', params, 'photos').body, status: 200
   end
 end
