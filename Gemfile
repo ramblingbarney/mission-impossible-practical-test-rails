@@ -49,3 +49,4 @@ end
 
 gem "httparty"
 
+gem "rack-cors"

@@ -11,7 +11,7 @@
 
 ## Running Server
 
-* ```bin/rails server```
+* ```bin/rails server --binding 127.0.0.1```
 
 ### Running Tests
 
