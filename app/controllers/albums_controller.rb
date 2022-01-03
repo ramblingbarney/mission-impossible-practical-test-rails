@@ -15,4 +15,9 @@ class AlbumsController < ApplicationController
     @album = Results.new
     render json: @album.query('/albums', params).body, status: 200
   end
+  private
+    # Only allow a list of trusted parameters through.
+    def album_params
+      params.permit(:id, :user_id)
+    end
 end
